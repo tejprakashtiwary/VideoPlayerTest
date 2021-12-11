@@ -27,3 +27,6 @@
  react-native run-android
  react-native start --reset-cache
  ```
+
+ ##For more settings visit
+ [Link to React-native](https://reactnative.dev/docs/environment-setup)

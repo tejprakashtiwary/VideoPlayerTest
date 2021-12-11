@@ -272,6 +272,7 @@ attr roundedCornerRadius
 attr roundingBorderColor
 attr roundingBorderPadding
 attr roundingBorderWidth
+attr scalableType
 attr searchHintIcon
 attr searchIcon
 attr searchViewStyle
@@ -747,8 +748,12 @@ id bottom
 id buttonPanel
 id catalyst_redbox_title
 id center
+id centerBottom
+id centerBottomCrop
 id centerCrop
 id centerInside
+id centerTop
+id centerTopCrop
 id center_vertical
 id checkbox
 id checked
@@ -764,6 +769,7 @@ id dialog_button
 id disableHome
 id edit_query
 id end
+id endInside
 id expand_activities_button
 id expanded_menu
 id fitBottomStart
@@ -786,6 +792,12 @@ id ifRoom
 id image
 id info
 id italic
+id leftBottom
+id leftBottomCrop
+id leftCenter
+id leftCenterCrop
+id leftTop
+id leftTopCrop
 id line1
 id line3
 id listMode
@@ -806,6 +818,12 @@ id progress_circular
 id progress_horizontal
 id radio
 id react_test_id
+id rightBottom
+id rightBottomCrop
+id rightCenter
+id rightCenterCrop
+id rightTop
+id rightTopCrop
 id right_icon
 id right_side
 id rn_frame_file
@@ -842,6 +860,7 @@ id split_action_bar
 id src_atop
 id src_in
 id src_over
+id startInside
 id submenuarrow
 id submit_area
 id tabMode
@@ -1449,4 +1468,5 @@ styleable Toolbar android_gravity android_minHeight buttonGravity collapseConten
 styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewStubCompat android_id android_layout android_inflatedId
+styleable scaleStyle scalableType
 xml rn_dev_preferences

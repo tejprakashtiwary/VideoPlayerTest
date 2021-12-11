@@ -17,7 +17,8 @@ import {
   useColorScheme,
   View,
   Dimensions,
-  TouchableOpacity
+  TouchableOpacity,
+  Image
 } from 'react-native';
 
 import Video from 'react-native-video';
@@ -45,8 +46,10 @@ const App: () => Node = () => {
   const [fullscreen, setFullscreen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [paused, setPaused] = useState(false);
+  // const [videoRate, setVideoRate] = useState(1);
   const [playerState, setPlayerState] = useState(PLAYER_STATES.PLAYING);
-  const [videoUri, setVideoUri] = useState([
+  const videoRates = [0.5, 1, 1.5, 2.0, 2.5, 3.0];
+  const videoUri = [
     {
       title: 'video1',
       uri: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
@@ -67,8 +70,9 @@ const App: () => Node = () => {
       title: 'video5',
       uri: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4',
     }
-  ]);
+  ];
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+  const [currentVideoRateIndex, setCurrentVideoRateIndex] = useState(1);
 
   // const [isLocked, setLocked] = useState();
   // const [orientation, setOrientation] = useState();
@@ -117,22 +121,20 @@ const App: () => Node = () => {
 
   const onSeek = seek => {
     videoPlayer.current.seek(seek);
+    setCurrentVideoRateIndex(1);
   };
 
   const onPaused = pState => {
     //console.log('playerState:',playerState);
     setPlayerState(pState);
     setPaused(!paused);
-    // this.setState({
-    //   paused: !this.state.paused,
-    //   playerState
-    // });
+    setCurrentVideoRateIndex(1);
   };
 
   const onReplay = () => {
     setPlayerState(PLAYER_STATES.PLAYING);
-    // this.setState({ playerState: PLAYER_STATES.PLAYING });
     videoPlayer.current.seek(0);
+    setCurrentVideoRateIndex(1);
   };
 
   const onProgress = data => {
@@ -140,19 +142,16 @@ const App: () => Node = () => {
     // Video Player will continue progress even if the video already ended
     if (!isLoading && playerState !== PLAYER_STATES.ENDED) {
       setCurrentTime(data.currentTime);
-      //this.setState({ currentTime: data.currentTime });
     }
   };
 
   const onLoad = data => {
     setDuration(data.duration);
     setIsLoading(false);
-    // this.setState({ duration: data.duration, isLoading: false });
   };
 
   const onLoadStart = data => {
     setIsLoading(true);
-    // this.setState({ isLoading: true });
   };
 
   const onEnd = () => {
@@ -166,6 +165,8 @@ const App: () => Node = () => {
     currentIndex = currentIndex + 1; // increase i by one
     currentIndex = currentIndex % videoUri.length; // if we've gone too high, start from `0` again
     setCurrentVideoIndex(currentIndex); // give us back the item of where we are now
+    setCurrentTime(0);
+    setCurrentVideoRateIndex(1);
   };
 
   const playPrevious = () => {
@@ -178,6 +179,15 @@ const App: () => Node = () => {
     }
     currentIndex = currentIndex - 1; // decrease by one
     setCurrentVideoIndex(currentIndex); // give us back the item of where we are now
+    setCurrentTime(0);
+    setCurrentVideoRateIndex(1);
+  };
+
+  const playSpeedVideoRate = () => {
+    let currentRateIndex = currentVideoRateIndex;
+    currentRateIndex = currentRateIndex + 1; // increase i by one
+    currentRateIndex = currentRateIndex % videoRates.length;
+    setCurrentVideoRateIndex(currentRateIndex); // give us back the item of where we are now
   };
 
   const onFullScreen = () => {
@@ -186,7 +196,6 @@ const App: () => Node = () => {
 
   const onSeeking = cTime => {
     setCurrentTime(cTime);
-    // this.setState({ currentTime });
   };
 
   const handleFullscreen = () => {
@@ -198,7 +207,6 @@ const App: () => Node = () => {
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <View>
         <Video
-          //source={{uri: ""+item.src}}   // Can be a URL or a local file.
           source={{uri: videoUri[currentVideoIndex].uri}}
           resizeMode="cover"
           onEnd={onEnd}
@@ -207,12 +215,10 @@ const App: () => Node = () => {
           onProgress={onProgress}
           onLoadStart={onLoadStart}
           pictureInPicture={true}
-          rate={1}
+          rate={videoRates[currentVideoRateIndex]}
           onError={e => console.log('error: ', e)}
           // controls={true}
           // fullscreen={fullscreen}
-          //poster={item.image}
-          //posterResizeMode='cover'
           ref={videoPlayer}
           style={{
             width: Dimensions.get('window').width,
@@ -227,7 +233,6 @@ const App: () => Node = () => {
           onSeeking={onSeeking}
           duration={duration}
           // fadeOutDelay={4000}
-          //toolbar={this.renderToolbar()}
           isLoading={isLoading}
           onFullScreen={onFullScreen}
           progress={currentTime}
@@ -236,37 +241,70 @@ const App: () => Node = () => {
 
           <MediaControls.Toolbar>
             <View style={styles.toolbar}>
-              <Text>{videoUri[currentVideoIndex].title} </Text>
+              <Text style={styles.title}>{videoUri[currentVideoIndex].title} </Text>
 
+              <TouchableOpacity
+                style={{
+                  height: 40,
+                  width: 40,
+                  backgroundColor: 'white',
+                  marginLeft: 50,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  borderRadius: 5
+                }}
+                onPress={() => {
+                  playPrevious();
+                }}>
+                <Image
+                  style={{height: 25, width: 25}}
+                  source={require('./Images/prev.png')}
+                />
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                style={{
+                  height: 40,
+                  width: 40,
+                  backgroundColor: 'white',
+                  marginLeft: 50,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  borderRadius: 5
+                }}
+                onPress={() => {
+                  playNext();
+                }}>
+                <Image
+                  style={{height: 25, width: 25}}
+                  source={require('./Images/next.png')}
+                />
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                style={{
+                  height: 40,
+                  width: 40,
+                  backgroundColor: 'white',
+                  marginLeft: 50,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  borderRadius: 5
+                }}
+                onPress={() => {
+                  playSpeedVideoRate();
+                }}>
+                <Image
+                  style={{height: 35, width: 35}}
+                  source={require('./Images/speed.png')}
+                />
+              </TouchableOpacity>
+              {(currentVideoRateIndex != 1) && (
+                <Text style={{marginLeft: 10, backgroundColor: 'white', padding: 5, borderRadius: 5, alignSelf: 'center'}}>{videoRates[currentVideoRateIndex]} x</Text>
+              )}
             </View>
-            <TouchableOpacity
-              style={{
-                height: 30,
-                width: 40,
-                justifyContent: 'center',
-                alignItems: 'center',
-                backgroundColor: '#c6c6c6',
-                position: 'absolute',
-                bottom: 0,
-                right: 0,
-                left:0,
-                top:0,
-                borderRadius: 5,
-              }}
-              onPress={() => {
-                playNext();
-              }}>
-              <Text>Skip</Text>
-            </TouchableOpacity>
           </MediaControls.Toolbar>
         </MediaControls>
-        {/* {(!this.state.reportGenerated) && (
-          <TouchableOpacity style={{height:30, width: 40, justifyContent: 'center', alignItems: 'center', backgroundColor: "#c6c6c6", position: 'absolute', bottom: 40, right: 15, borderRadius: 5}}
-            onPress={() => {this.playNext()}}>
-            <Text>Skip</Text>
-          </TouchableOpacity>
-        )} */}
-
       </View>
     </SafeAreaView>
   );
@@ -275,9 +313,16 @@ const App: () => Node = () => {
 const styles = StyleSheet.create({
   toolbar: {
     // marginTop: 30,
+    // backgroundColor: 'white',
+    // padding: 10,
+    // borderRadius: 5,
+    flexDirection: 'row'
+  },
+  title: {
     backgroundColor: 'white',
     padding: 10,
     borderRadius: 5,
+    alignSelf: 'center'
   },
   sectionContainer: {
     marginTop: 32,

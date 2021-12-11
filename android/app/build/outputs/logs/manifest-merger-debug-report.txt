@@ -8,6 +8,8 @@ MERGED from /Users/Apple/projects/VideoPlayerTest/android/app/src/main/AndroidMa
 MERGED from [com.facebook.flipper:flipper:0.99.0] /Users/Apple/.gradle/caches/transforms-3/2f5725507f1929c6ddf8255f0bef77bd/transformed/jetified-flipper-0.99.0/AndroidManifest.xml:8:1-18:12
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.99.0] /Users/Apple/.gradle/caches/transforms-3/2c29b736c8f2a9d82fade7115b471d70/transformed/jetified-flipper-network-plugin-0.99.0/AndroidManifest.xml:8:1-15:12
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.99.0] /Users/Apple/.gradle/caches/transforms-3/e3a733608d857c466939da27af54ba77/transformed/jetified-flipper-fresco-plugin-0.99.0/AndroidManifest.xml:8:1-15:12
+MERGED from [:react-native-orientation-locker] /Users/Apple/projects/VideoPlayerTest/node_modules/react-native-orientation-locker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-video] /Users/Apple/projects/VideoPlayerTest/node_modules/react-native-video/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.react:react-native:0.66.4] /Users/Apple/.gradle/caches/transforms-3/7403ebe5571a2ce5a6a5fc9876af4814/transformed/jetified-react-native-0.66.4/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/Apple/.gradle/caches/transforms-3/9341f36f0ce470d4b55127e33c2ce075/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [org.webkit:android-jsc:r250230] /Users/Apple/.gradle/caches/transforms-3/7873a5158addb5bf75ec8bc5226b9f2a/transformed/jetified-android-jsc-r250230/AndroidManifest.xml:2:1-11:12
@@ -53,6 +55,7 @@ MERGED from [androidx.tracing:tracing:1.0.0] /Users/Apple/.gradle/caches/transfo
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/Apple/.gradle/caches/transforms-3/52571f97fa6c48622e09021afd8f199b/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] /Users/Apple/.gradle/caches/transforms-3/d17db292503a9dfb32fc2010180b8533/transformed/lifecycle-livedata-core-2.3.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/Apple/.gradle/caches/transforms-3/f9626132104606c8a5a0763d03129850/transformed/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.yqritc:android-scalablevideoview:1.0.4] /Users/Apple/.gradle/caches/transforms-3/9ef8f70cce4fd975fc559a114c8d8463/transformed/jetified-android-scalablevideoview-1.0.4/AndroidManifest.xml:2:1-12:12
 MERGED from [com.facebook.fresco:fbcore:2.5.0] /Users/Apple/.gradle/caches/transforms-3/80cae4052e041bdf30fb0fa272e54409/transformed/jetified-fbcore-2.5.0/AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] /Users/Apple/.gradle/caches/transforms-3/65083a7e9fb6753ce1340588a4e7a976/transformed/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:17:1-24:12
 INJECTED from /Users/Apple/projects/VideoPlayerTest/android/app/src/debug/AndroidManifest.xml:2:1-13:12
@@ -151,6 +154,10 @@ MERGED from [com.facebook.flipper:flipper-network-plugin:0.99.0] /Users/Apple/.g
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.99.0] /Users/Apple/.gradle/caches/transforms-3/2c29b736c8f2a9d82fade7115b471d70/transformed/jetified-flipper-network-plugin-0.99.0/AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.99.0] /Users/Apple/.gradle/caches/transforms-3/e3a733608d857c466939da27af54ba77/transformed/jetified-flipper-fresco-plugin-0.99.0/AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.99.0] /Users/Apple/.gradle/caches/transforms-3/e3a733608d857c466939da27af54ba77/transformed/jetified-flipper-fresco-plugin-0.99.0/AndroidManifest.xml:11:5-13:41
+MERGED from [:react-native-orientation-locker] /Users/Apple/projects/VideoPlayerTest/node_modules/react-native-orientation-locker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-orientation-locker] /Users/Apple/projects/VideoPlayerTest/node_modules/react-native-orientation-locker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-video] /Users/Apple/projects/VideoPlayerTest/node_modules/react-native-video/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-video] /Users/Apple/projects/VideoPlayerTest/node_modules/react-native-video/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.react:react-native:0.66.4] /Users/Apple/.gradle/caches/transforms-3/7403ebe5571a2ce5a6a5fc9876af4814/transformed/jetified-react-native-0.66.4/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.react:react-native:0.66.4] /Users/Apple/.gradle/caches/transforms-3/7403ebe5571a2ce5a6a5fc9876af4814/transformed/jetified-react-native-0.66.4/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/Apple/.gradle/caches/transforms-3/9341f36f0ce470d4b55127e33c2ce075/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
@@ -241,6 +248,8 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] /Users/Apple/.gra
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] /Users/Apple/.gradle/caches/transforms-3/d17db292503a9dfb32fc2010180b8533/transformed/lifecycle-livedata-core-2.3.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/Apple/.gradle/caches/transforms-3/f9626132104606c8a5a0763d03129850/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/Apple/.gradle/caches/transforms-3/f9626132104606c8a5a0763d03129850/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.yqritc:android-scalablevideoview:1.0.4] /Users/Apple/.gradle/caches/transforms-3/9ef8f70cce4fd975fc559a114c8d8463/transformed/jetified-android-scalablevideoview-1.0.4/AndroidManifest.xml:8:5-10:41
+MERGED from [com.yqritc:android-scalablevideoview:1.0.4] /Users/Apple/.gradle/caches/transforms-3/9ef8f70cce4fd975fc559a114c8d8463/transformed/jetified-android-scalablevideoview-1.0.4/AndroidManifest.xml:8:5-10:41
 MERGED from [com.facebook.fresco:fbcore:2.5.0] /Users/Apple/.gradle/caches/transforms-3/80cae4052e041bdf30fb0fa272e54409/transformed/jetified-fbcore-2.5.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:fbcore:2.5.0] /Users/Apple/.gradle/caches/transforms-3/80cae4052e041bdf30fb0fa272e54409/transformed/jetified-fbcore-2.5.0/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] /Users/Apple/.gradle/caches/transforms-3/65083a7e9fb6753ce1340588a4e7a976/transformed/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:20:5-22:41
