@@ -1,0 +1,14 @@
+com/videoplayertest/MainApplication.java
+ com.videoplayertest.MainApplication
+ com.videoplayertest.MainApplication$1
+com/videoplayertest/MainActivity.java
+ com.videoplayertest.MainActivity
+com/videoplayertest/ReactNativeFlipper.java
+ com.videoplayertest.ReactNativeFlipper
+ com.videoplayertest.ReactNativeFlipper$1
+ com.videoplayertest.ReactNativeFlipper$2
+ com.videoplayertest.ReactNativeFlipper$2$1
+com/videoplayertest/BuildConfig.java
+ com.videoplayertest.BuildConfig
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList
